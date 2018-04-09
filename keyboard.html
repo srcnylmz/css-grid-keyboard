@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSS Grid Keyboard</title>
+		<style type="text/css">
+			
+			@import url('https://fonts.googleapis.com/css?family=Muli');
+			@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+			body {
+				display: flex;
+    			align-items: center;
+	    		justify-content: center;
+	    		height: 100vh;
+	    		background: #ddd;
+	    		overflow: hidden;
+			}
+
+			.wrapper {
+				display: grid;
+				grid-template-columns: repeat(350, 1fr);
+				grid-template-rows: repeat(33, 1fr);
+				grid-row-gap: 3px;
+				grid-column-gap: 3px;
+				background-color: #a5adb0;
+				border-radius: 5px;
+				color: #ddd;
+				padding: 15px;
+				font-family: 'Muli';
+				max-width: 1100px;
+			}
+
+			.func {
+				grid-column: span 25;
+				grid-row: span 3;
+				border-radius: 5px;
+				background: #20252A;
+				display: grid;
+  				align-items: center;
+  				justify-items: center; 
+  				border-bottom: 5px solid #000;
+  				cursor: pointer;
+
+			}
+
+			.num {
+				grid-column: span 24;
+				grid-row: span 6;
+				border-radius: 5px;
+				background: #20252A;
+				display: grid;
+  				align-items: center;
+  				justify-content: center; 
+  				border-bottom: 5px solid #000;
+  				cursor: pointer;
+			}
+
+			.back {
+				grid-column: span 38;
+			}
+
+			.letters {
+				display: flex;
+				grid-column: span 24;
+				grid-row: span 6;
+				border-radius: 5px;
+				background: #20252A;
+				display: grid;
+  				align-items: center;
+  				justify-content: center;
+  				border-bottom: 5px solid #000;
+  				cursor: pointer;
+			}
+
+			.tab {
+				grid-column: span 38;
+			}
+
+			.caps {
+				grid-column: span 42;
+			}
+
+			.enter {
+				grid-column: span 44;
+			}
+
+			.left-shift {
+				grid-column: span 50;
+			}
+
+			.right-shift {
+				grid-column: span 60;
+			}
+
+			.fn {
+				grid-column: span 22;
+			}
+
+			.left-command, .right-command {
+				grid-column: span 28;
+			}
+
+			.space {
+				grid-column: span 120;
+			}
+
+			.up {
+				grid-row: span 3;
+			}
+
+			.down {
+				grid-row: span 3;
+				border-bottom: 0px;
+				border-top: 5px solid #000;;
+			}
+
+			.left, .right {
+				grid-column: span 28;
+			}
+
+			.func:active, .num:active, .letters:active {
+				border-bottom: 5px inset #20252A;
+				background: #111;
+			}
+
+			.down:active {
+				border-bottom: 0px !important;
+				border-top: 5px inset #20252A;
+				background: #111;
+			}
+
+
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+
+			<!-- first row -->
+
+			<div class="func">esc</div>
+			<div class="func">F1</div>
+			<div class="func">F2</div>
+			<div class="func">F3</div>
+			<div class="func">F4</div>
+			<div class="func">F5</div>
+			<div class="func">F6</div>
+			<div class="func">F7</div>
+			<div class="func">F8</div>
+			<div class="func">F9</div>
+			<div class="func">F10</div>
+			<div class="func">F11</div>
+			<div class="func">F12</div>
+			<div class="func">F13</div>
+
+			<!-- second row -->
+
+			<div class="num">~<br/>`</div>
+			<div class="num">!<br/>1</div>
+			<div class="num">@<br/>2</div>
+			<div class="num">#<br/>3</div>
+			<div class="num">$<br/>4</div>
+			<div class="num">%<br/>5</div>
+			<div class="num">^<br/>6</div>
+			<div class="num">&<br/>7</div>
+			<div class="num">*<br/>8</div>
+			<div class="num">(<br/>9</div>
+			<div class="num">)<br/>0</div>
+			<div class="num">-<br/>_</div>
+			<div class="num">+<br/>=</div>
+			<div class="num back">delete</div>
+
+			<!-- third row -->
+
+			<div class="letters tab"><i class="material-icons">&#xe31c;</i></div>
+			<div class="letters">Q</div>
+			<div class="letters">W</div>
+			<div class="letters">E</div>
+			<div class="letters">R</div>
+			<div class="letters">T</div>
+			<div class="letters">Y</div>
+			<div class="letters">U</div>
+			<div class="letters">I</div>
+			<div class="letters">O</div>
+			<div class="letters">P</div>
+			<div class="letters">{<br/>[</div>
+			<div class="letters">}<br/>]</div>
+			<div class="letters">|<br/>/</div>
+
+			<!-- fourth row -->
+
+			<div class="letters caps">caps lock</div>
+			<div class="letters">A</div>
+			<div class="letters">S</div>
+			<div class="letters">D</div>
+			<div class="letters">F</div>
+			<div class="letters">G</div>
+			<div class="letters">H</div>
+			<div class="letters">J</div>
+			<div class="letters">K</div>
+			<div class="letters">L</div>
+			<div class="letters">:<br/>;</div>
+			<div class="letters">"<br/>'</div>
+			<div class="letters enter">enter<br/>return</div>	
+
+			<!-- fifth row -->		
+			
+			<div class="letters left-shift">shift</div>
+			<div class="letters">Z</div>
+			<div class="letters">X</div>
+			<div class="letters">C</div>
+			<div class="letters">V</div>
+			<div class="letters">B</div>
+			<div class="letters">N</div>
+			<div class="letters">M</div>
+			<div class="letters"><<br/>,</div>
+			<div class="letters">><br/>.</div>
+			<div class="letters">?<br/>\</div>
+			<div class="letters right-shift">shift</div>	
+
+			<!-- sixth row -->
+
+			<div class="letters fn">fn</div>
+			<div class="letters">control</div>
+			<div class="letters">option</div>
+			<div class="letters left-command">⌘<br/>cmd</div>
+			<div class="letters space"></div>
+			<div class="letters right-command">⌘<br/>cmd</div>
+			<div class="letters">option</div>
+			<div class="letters left">&larr;</div>
+			<div class="letters up">&uarr;</div>
+			<div class="letters right">&rarr;</div>
+			<div class="letters down">&darr;</div>
+		</div>
+	</body>
+</html>
